@@ -14,8 +14,7 @@ public class PesquisandoNoGoogle {
 	
 	@Before
 	public void preCondicao() {
-		System.setProperty("webdriver.chrome.driver", 
-				"C:\\tools\\selenium\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\tools\\selenium\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("https://www.google.com.br");
 		driver.manage().window().maximize();
@@ -26,6 +25,8 @@ public class PesquisandoNoGoogle {
 		WebElement caixaPesquisa = driver.findElement(By.name("q"));
 		caixaPesquisa.clear();
 		caixaPesquisa.sendKeys("search google");
+		WebElement botaoPesquisa = driver.findElement(By.name("btnK"));
+		botaoPesquisa.submit();
 	}
 	
 	@After
