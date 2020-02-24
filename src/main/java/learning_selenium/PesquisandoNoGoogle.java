@@ -22,7 +22,7 @@ public class PesquisandoNoGoogle {
 	
 	@Test
 	public void teste() {
-		WebElement caixaPesquisa = driver.findElement(By.name("q"));
+		WebElement caixaPesquisa = driver.findElement(By.cssSelector(".gLFyf"));
 		caixaPesquisa.clear();
 		caixaPesquisa.sendKeys("search google");
 		WebElement botaoPesquisa = driver.findElement(By.name("btnK"));
