@@ -60,7 +60,7 @@ public class CadastroFacebookPage {
 	}
 	
 	public CadastroFacebookPage selecionaSexoMasculino() {
-		driver.findElement(By.id("u_0_a")).click();
+		driver.findElement(By.id("u_0_7")).click();
 		return this;
 	}
 	
@@ -75,7 +75,12 @@ public class CadastroFacebookPage {
 	}
 	
 	public CadastroFacebookPage clicaEmEntrar() {
-		driver.findElement(By.id("u_0_4")).submit();
+		driver.findElement(By.id("u_0_b")).click();
+		return this;
+	}
+	
+	public CadastroFacebookPage deveLogarComo(String user, String password) {
+		insereLogin(user).preencheSenhaLogin(password).clicaEmEntrar();
 		return this;
 	}
 	
